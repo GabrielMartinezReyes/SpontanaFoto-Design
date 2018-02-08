@@ -16,6 +16,8 @@
 		545F952D202C83800026E0AD /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F952C202C83800026E0AD /* ServiceTableViewCell.swift */; };
 		545F952F202C83D60026E0AD /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F952E202C83D60026E0AD /* ServiceViewController.swift */; };
 		545F9532202CA89B0026E0AD /* OmOssViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F9531202CA89B0026E0AD /* OmOssViewController.swift */; };
+		545F9535202CEA3E0026E0AD /* PortfolioCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F9534202CEA3E0026E0AD /* PortfolioCollectionViewController.swift */; };
+		545F9537202CEE910026E0AD /* PortfolioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F9536202CEE910026E0AD /* PortfolioCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		545F952C202C83800026E0AD /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
 		545F952E202C83D60026E0AD /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
 		545F9531202CA89B0026E0AD /* OmOssViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmOssViewController.swift; sourceTree = "<group>"; };
+		545F9534202CEA3E0026E0AD /* PortfolioCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCollectionViewController.swift; sourceTree = "<group>"; };
+		545F9536202CEE910026E0AD /* PortfolioCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 				545F9519202C59B60026E0AD /* ViewController.swift */,
 				545F9530202CA84C0026E0AD /* OmOss */,
 				545F9529202C83010026E0AD /* Service */,
+				545F9533202CAFC90026E0AD /* Portfolio */,
 				545F951B202C59B60026E0AD /* Main.storyboard */,
 				545F951E202C59B60026E0AD /* Assets.xcassets */,
 				545F9520202C59B60026E0AD /* LaunchScreen.storyboard */,
@@ -90,6 +95,15 @@
 				545F9531202CA89B0026E0AD /* OmOssViewController.swift */,
 			);
 			path = OmOss;
+			sourceTree = "<group>";
+		};
+		545F9533202CAFC90026E0AD /* Portfolio */ = {
+			isa = PBXGroup;
+			children = (
+				545F9534202CEA3E0026E0AD /* PortfolioCollectionViewController.swift */,
+				545F9536202CEE910026E0AD /* PortfolioCollectionViewCell.swift */,
+			);
+			path = Portfolio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +181,8 @@
 				545F952B202C833E0026E0AD /* ServiceTableViewController.swift in Sources */,
 				545F952D202C83800026E0AD /* ServiceTableViewCell.swift in Sources */,
 				545F951A202C59B60026E0AD /* ViewController.swift in Sources */,
+				545F9537202CEE910026E0AD /* PortfolioCollectionViewCell.swift in Sources */,
+				545F9535202CEA3E0026E0AD /* PortfolioCollectionViewController.swift in Sources */,
 				545F952F202C83D60026E0AD /* ServiceViewController.swift in Sources */,
 				545F9532202CA89B0026E0AD /* OmOssViewController.swift in Sources */,
 				545F9518202C59B60026E0AD /* AppDelegate.swift in Sources */,

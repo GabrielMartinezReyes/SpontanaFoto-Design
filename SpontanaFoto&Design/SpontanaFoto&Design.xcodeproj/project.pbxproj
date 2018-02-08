@@ -12,6 +12,9 @@
 		545F951D202C59B60026E0AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545F951B202C59B60026E0AD /* Main.storyboard */; };
 		545F951F202C59B60026E0AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 545F951E202C59B60026E0AD /* Assets.xcassets */; };
 		545F9522202C59B60026E0AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545F9520202C59B60026E0AD /* LaunchScreen.storyboard */; };
+		545F952B202C833E0026E0AD /* ServiceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F952A202C833E0026E0AD /* ServiceTableViewController.swift */; };
+		545F952D202C83800026E0AD /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F952C202C83800026E0AD /* ServiceTableViewCell.swift */; };
+		545F952F202C83D60026E0AD /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F952E202C83D60026E0AD /* ServiceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		545F951E202C59B60026E0AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		545F9521202C59B60026E0AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		545F9523202C59B60026E0AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		545F952A202C833E0026E0AD /* ServiceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewController.swift; sourceTree = "<group>"; };
+		545F952C202C83800026E0AD /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
+		545F952E202C83D60026E0AD /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +62,23 @@
 			children = (
 				545F9517202C59B60026E0AD /* AppDelegate.swift */,
 				545F9519202C59B60026E0AD /* ViewController.swift */,
+				545F9529202C83010026E0AD /* Service */,
 				545F951B202C59B60026E0AD /* Main.storyboard */,
 				545F951E202C59B60026E0AD /* Assets.xcassets */,
 				545F9520202C59B60026E0AD /* LaunchScreen.storyboard */,
 				545F9523202C59B60026E0AD /* Info.plist */,
 			);
 			path = "SpontanaFoto&Design";
+			sourceTree = "<group>";
+		};
+		545F9529202C83010026E0AD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				545F952A202C833E0026E0AD /* ServiceTableViewController.swift */,
+				545F952C202C83800026E0AD /* ServiceTableViewCell.swift */,
+				545F952E202C83D60026E0AD /* ServiceViewController.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +153,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				545F952B202C833E0026E0AD /* ServiceTableViewController.swift in Sources */,
+				545F952D202C83800026E0AD /* ServiceTableViewCell.swift in Sources */,
 				545F951A202C59B60026E0AD /* ViewController.swift in Sources */,
+				545F952F202C83D60026E0AD /* ServiceViewController.swift in Sources */,
 				545F9518202C59B60026E0AD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

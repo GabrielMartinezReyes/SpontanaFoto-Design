@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Light</string>
+        </array>
         <array key="AvenirNext.ttc">
             <string>AvenirNext-Bold</string>
         </array>
@@ -113,24 +116,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="588" y="627"/>
+            <point key="canvasLocation" x="927.20000000000005" y="626.53673163418296"/>
         </scene>
         <!--Service-->
         <scene sceneID="BUx-ve-rdm">
             <objects>
-                <tableViewController id="OrA-xd-YG2" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FKe-X2-kHL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                <tableViewController id="OrA-xd-YG2" customClass="ServiceTableViewController" customModule="SpontanaFoto_Design" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FKe-X2-kHL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="nBe-KR-vzt">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="serviceCell" rowHeight="80" id="nBe-KR-vzt" customClass="ServiceTableViewCell" customModule="SpontanaFoto_Design" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nBe-KR-vzt" id="0Jk-NL-tm5">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="cNd-e7-fmD">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjZ-7E-PPs">
+                                            <rect key="frame" x="8" y="8" width="359" height="64"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="30"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="cNd-e7-fmD" secondAttribute="trailing" id="6Ud-SG-06p"/>
+                                        <constraint firstAttribute="trailing" secondItem="jjZ-7E-PPs" secondAttribute="trailing" constant="8" id="DuG-Ig-j3s"/>
+                                        <constraint firstItem="jjZ-7E-PPs" firstAttribute="leading" secondItem="0Jk-NL-tm5" secondAttribute="leading" constant="8" id="Jtc-qd-ScO"/>
+                                        <constraint firstAttribute="bottom" secondItem="cNd-e7-fmD" secondAttribute="bottom" id="KbF-UR-7eJ"/>
+                                        <constraint firstItem="jjZ-7E-PPs" firstAttribute="top" secondItem="0Jk-NL-tm5" secondAttribute="top" constant="8" id="MPA-La-bJB"/>
+                                        <constraint firstItem="cNd-e7-fmD" firstAttribute="top" secondItem="0Jk-NL-tm5" secondAttribute="top" id="N8e-SC-AgZ"/>
+                                        <constraint firstAttribute="bottom" secondItem="jjZ-7E-PPs" secondAttribute="bottom" constant="8" id="chU-ro-2TY"/>
+                                        <constraint firstItem="cNd-e7-fmD" firstAttribute="leading" secondItem="0Jk-NL-tm5" secondAttribute="leading" id="kDe-AG-p2d"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellTitle" destination="jjZ-7E-PPs" id="qOy-2l-rL9"/>
+                                    <segue destination="1Ce-Bq-5c6" kind="show" identifier="segueDetails" id="xy8-DO-o8a"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -138,11 +166,59 @@
                             <outlet property="delegate" destination="OrA-xd-YG2" id="em9-gz-uZY"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Service" image="Tab3" selectedImage="Tab3" id="J2W-48-QTc"/>
+                    <navigationItem key="navigationItem" title="Service" id="zwU-Hr-fOQ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Rs-fy-tHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-794" y="1030"/>
+            <point key="canvasLocation" x="-887.20000000000005" y="1030.4347826086957"/>
+        </scene>
+        <!--Service View Controller-->
+        <scene sceneID="1it-3n-zqr">
+            <objects>
+                <viewController id="1Ce-Bq-5c6" customClass="ServiceViewController" customModule="SpontanaFoto_Design" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xjd-xm-2xz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="rYz-h6-Z0Z">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKd-7H-BIS">
+                                <rect key="frame" x="0.0" y="275" width="375" height="259"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frukter" translatesAutoresizingMaskIntoConstraints="NO" id="ql4-q9-b2T">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="259"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rYz-h6-Z0Z" firstAttribute="top" secondItem="w2u-sc-ZEC" secondAttribute="top" id="4HR-6Q-esa"/>
+                            <constraint firstItem="rYz-h6-Z0Z" firstAttribute="trailing" secondItem="w2u-sc-ZEC" secondAttribute="trailing" id="8fD-M8-ukO"/>
+                            <constraint firstItem="aKd-7H-BIS" firstAttribute="leading" secondItem="w2u-sc-ZEC" secondAttribute="leading" id="ACs-zZ-K79"/>
+                            <constraint firstItem="aKd-7H-BIS" firstAttribute="top" secondItem="ql4-q9-b2T" secondAttribute="bottom" constant="16" id="L95-id-d03"/>
+                            <constraint firstItem="ql4-q9-b2T" firstAttribute="trailing" secondItem="w2u-sc-ZEC" secondAttribute="trailing" id="TjE-Jd-L2z"/>
+                            <constraint firstItem="aKd-7H-BIS" firstAttribute="trailing" secondItem="w2u-sc-ZEC" secondAttribute="trailing" id="Uxy-SR-M9o"/>
+                            <constraint firstItem="rYz-h6-Z0Z" firstAttribute="bottom" secondItem="w2u-sc-ZEC" secondAttribute="bottom" id="gq0-71-tmR"/>
+                            <constraint firstItem="ql4-q9-b2T" firstAttribute="leading" secondItem="w2u-sc-ZEC" secondAttribute="leading" id="mzx-PT-bfO"/>
+                            <constraint firstItem="aKd-7H-BIS" firstAttribute="height" secondItem="ql4-q9-b2T" secondAttribute="height" id="slj-qH-e7z"/>
+                            <constraint firstItem="ql4-q9-b2T" firstAttribute="top" secondItem="w2u-sc-ZEC" secondAttribute="top" id="tRD-MJ-mqO"/>
+                            <constraint firstItem="rYz-h6-Z0Z" firstAttribute="leading" secondItem="w2u-sc-ZEC" secondAttribute="leading" id="vcR-6x-qw8"/>
+                            <constraint firstItem="w2u-sc-ZEC" firstAttribute="bottom" secondItem="aKd-7H-BIS" secondAttribute="bottom" constant="20" id="zfy-Ia-k6N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="w2u-sc-ZEC"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailDescription" destination="aKd-7H-BIS" id="fsF-wC-KFS"/>
+                        <outlet property="detailImage" destination="ql4-q9-b2T" id="HTN-Ug-cHN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8yf-ar-EQ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-87.200000000000003" y="1029.5352323838081"/>
         </scene>
         <!--Om oss-->
         <scene sceneID="6aG-0V-da7">
@@ -225,7 +301,7 @@
                     <connections>
                         <segue destination="EHi-hg-Esw" kind="relationship" relationship="viewControllers" id="QTO-Qf-LdV"/>
                         <segue destination="r7L-cZ-O5n" kind="relationship" relationship="viewControllers" id="Fje-Wl-zBX"/>
-                        <segue destination="OrA-xd-YG2" kind="relationship" relationship="viewControllers" id="kfi-eV-V8c"/>
+                        <segue destination="wLY-JQ-mWD" kind="relationship" relationship="viewControllers" id="kfi-eV-V8c"/>
                         <segue destination="h0t-kl-ObN" kind="relationship" relationship="viewControllers" id="o7R-jA-SkB"/>
                         <segue destination="I1q-vf-hDe" kind="relationship" relationship="viewControllers" id="knC-jo-aFx"/>
                     </connections>
@@ -258,6 +334,30 @@
             </objects>
             <point key="canvasLocation" x="-460" y="296"/>
         </scene>
+        <!--Service-->
+        <scene sceneID="4Am-ha-3AH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wLY-JQ-mWD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Service" image="Tab3" selectedImage="Tab3" id="J2W-48-QTc"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="29E-eK-a3e">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.20445618030000001" green="0.31974619630000001" blue="0.50988745690000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OrA-xd-YG2" kind="relationship" relationship="rootViewController" id="Lfa-Id-rYh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EJu-4I-oLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1630" y="1031"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Background" width="2560" height="1600"/>
@@ -266,6 +366,7 @@
         <image name="Tab3" width="30" height="30"/>
         <image name="Tab4" width="30" height="30"/>
         <image name="Tab5" width="30" height="30"/>
+        <image name="frukter" width="1000" height="710"/>
         <image name="logo" width="526" height="448"/>
     </resources>
 </document>

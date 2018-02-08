@@ -15,6 +15,7 @@
 		545F952B202C833E0026E0AD /* ServiceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F952A202C833E0026E0AD /* ServiceTableViewController.swift */; };
 		545F952D202C83800026E0AD /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F952C202C83800026E0AD /* ServiceTableViewCell.swift */; };
 		545F952F202C83D60026E0AD /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F952E202C83D60026E0AD /* ServiceViewController.swift */; };
+		545F9532202CA89B0026E0AD /* OmOssViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F9531202CA89B0026E0AD /* OmOssViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		545F952A202C833E0026E0AD /* ServiceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewController.swift; sourceTree = "<group>"; };
 		545F952C202C83800026E0AD /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
 		545F952E202C83D60026E0AD /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
+		545F9531202CA89B0026E0AD /* OmOssViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmOssViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				545F9517202C59B60026E0AD /* AppDelegate.swift */,
 				545F9519202C59B60026E0AD /* ViewController.swift */,
+				545F9530202CA84C0026E0AD /* OmOss */,
 				545F9529202C83010026E0AD /* Service */,
 				545F951B202C59B60026E0AD /* Main.storyboard */,
 				545F951E202C59B60026E0AD /* Assets.xcassets */,
@@ -79,6 +82,14 @@
 				545F952E202C83D60026E0AD /* ServiceViewController.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		545F9530202CA84C0026E0AD /* OmOss */ = {
+			isa = PBXGroup;
+			children = (
+				545F9531202CA89B0026E0AD /* OmOssViewController.swift */,
+			);
+			path = OmOss;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +168,7 @@
 				545F952D202C83800026E0AD /* ServiceTableViewCell.swift in Sources */,
 				545F951A202C59B60026E0AD /* ViewController.swift in Sources */,
 				545F952F202C83D60026E0AD /* ServiceViewController.swift in Sources */,
+				545F9532202CA89B0026E0AD /* OmOssViewController.swift in Sources */,
 				545F9518202C59B60026E0AD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

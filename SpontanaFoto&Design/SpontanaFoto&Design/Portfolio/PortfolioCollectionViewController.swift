@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class PortfolioCollectionViewController: UICollectionViewController {
+class PortfolioCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     
     
@@ -23,9 +23,7 @@ class PortfolioCollectionViewController: UICollectionViewController {
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView?.backgroundView = UIImageView(image: UIImage(named: "Background"))
 
         // Do any additional setup after loading the view.
     }
@@ -49,21 +47,77 @@ class PortfolioCollectionViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return imageList.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
-    
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! PortfolioCollectionViewCell
+        
+        cell.cellImage.image = UIImage(named: imageList[indexPath.row])
+        
         return cell
+        
+    }
+    
+    // fixar ordning på elememnt för mindre skärmar så som Iphone SE och Iphone 5/5s.
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let screenSize : CGRect = UIScreen.main.bounds
+        
+        var widthCell = 0
+        var heightCell = 0
+        
+        if screenSize.width == 320 {
+            
+            widthCell = 130
+            heightCell = 130
+            
+        }
+      
+        if screenSize.width == 375 {
+            
+            widthCell = 160
+            heightCell = 160
+            
+        }
+        
+        if screenSize.width == 414 {
+            
+            widthCell = 180
+            heightCell = 180
+            
+        }
+        
+        if screenSize.width == 768 {
+            
+            widthCell = 230
+            heightCell = 230
+            
+        }
+        
+        if screenSize.width == 834 {
+            
+            widthCell = 250
+            heightCell = 250
+            
+        }
+        
+        if screenSize.width == 1024 {
+            
+            widthCell = 310
+            heightCell = 310
+            
+        }
+        
+        return CGSize(width: widthCell, height: heightCell)
     }
 
     // MARK: UICollectionViewDelegate

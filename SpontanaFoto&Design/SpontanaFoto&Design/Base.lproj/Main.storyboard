@@ -252,7 +252,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rS0-iR-btv">
                                 <rect key="frame" x="16" y="288" width="343" height="260"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <mutableString key="text">Mitt namn är Gabriel Martinez, jag är skapare av företaget “Spontana foto &amp; design”. I mitten av 2014 bestämde mig för att göra mitt examensarbete genom att starta en enskild firma inom fotografering och webbutveckling som skulle kallas för Spontana foto &amp; design. Fotografering har alltid varit en hobby men då jag samma år blev jag pappa till världens bästa son växte intresset för fotografering och jag tog fotografering till en mer professionell nivå. Jag skaffade min första DSLR kamera för att dokumentära min sons uppväxt men insåg att jag var duktig och kunde göra folk glada med mina bilder. Nu har företaget funnits ett tag och jag har hunnit med både bröllops- och porträttfotografering. Välkommen att ta del av vårt utbud!</mutableString>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -366,9 +366,12 @@
                                         <rect key="frame" x="0.0" y="50" width="343" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
-                                        <state key="normal" title="Adress">
+                                        <state key="normal" title="Vägbeskrivning">
                                             <color key="titleColor" red="0.20445618030000001" green="0.31974619630000001" blue="0.50988745690000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="directions:" destination="I1q-vf-hDe" eventType="touchUpInside" id="9eG-1X-2il"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLc-Xs-2Sb">
                                         <rect key="frame" x="0.0" y="100" width="343" height="40"/>
@@ -377,12 +380,15 @@
                                         <state key="normal" title="Ring Oss">
                                             <color key="titleColor" red="0.20445618030000001" green="0.31974619630000001" blue="0.50988745690000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="callUs:" destination="I1q-vf-hDe" eventType="touchUpInside" id="tq0-ZL-Uk6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8MY-wv-OwB">
                                         <rect key="frame" x="0.0" y="150" width="343" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
-                                        <state key="normal" title="E-Post Oss">
+                                        <state key="normal" title="Mejla Oss">
                                             <color key="titleColor" red="0.20445618030000001" green="0.31974619630000001" blue="0.50988745690000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>

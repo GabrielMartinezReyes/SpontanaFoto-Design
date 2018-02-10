@@ -22,8 +22,8 @@ class KontaktOssViewController: UIViewController {
     
     @IBOutlet weak var linkBtn: UIButton!
     
-    var latitude = 0.0
-    var lomgitude = 0.0
+    var latitude = 56.044123
+    var longitude = 12.695043
     
     
     override func viewDidLoad() {
@@ -36,8 +36,26 @@ class KontaktOssViewController: UIViewController {
         epostBtn.layer.cornerRadius = 5
         linkBtn.layer.cornerRadius = 5
         
+        //56.044123, 12.695043
+        
         let span = MKCoordinateSpanMake(0.005, 0.005)
-        let region = MKCoordinateRegion(center: <#T##CLLocationCoordinate2D#>, span: <#T##MKCoordinateSpan#>)
+        let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
+        
+        mapView.setRegion(region, animated: true)
+        
+        
+        let pinLocation : CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+        let pinAnn = MKPointAnnotation()
+        
+        pinAnn.coordinate = pinLocation
+        pinAnn.title = "Spontana foto & design"
+        pinAnn.subtitle = "Helsingborg Sweden"
+        self.mapView.addAnnotation(pinAnn)
+        
+        
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,4 +74,26 @@ class KontaktOssViewController: UIViewController {
     }
     */
 
+    @IBAction func directions(_ sender: Any) {
+        
+        UIApplication.shared.open(URL(string:"http://maps.apple.com/maps?daddr=\(latitude), \(longitude)")!, options: [:], completionHandler: nil)
+        
+        
+        
+        
+        
+    }
+    
+    @IBAction func callUs(_ sender: Any) {
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

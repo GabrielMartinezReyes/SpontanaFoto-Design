@@ -52,6 +52,25 @@ class KontaktOssViewController: UIViewController {
         pinAnn.subtitle = "Helsingborg Sweden"
         self.mapView.addAnnotation(pinAnn)
         
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         

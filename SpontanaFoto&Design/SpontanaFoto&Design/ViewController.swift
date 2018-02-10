@@ -31,6 +31,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         cornerRadius()
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         
     }

@@ -1,25 +1,32 @@
 //
-//  ServiceTableViewController.swift
+//  SocialTableViewController.swift
 //  SpontanaFoto&Design
 //
-//  Created by Gabriel Martinez on 2018-02-08.
+//  Created by Gabriel Martinez on 2018-02-10.
 //  Copyright © 2018 Gabriel Martinez. All rights reserved.
 //
 
 import UIKit
 
-class ServiceTableViewController: UITableViewController {
+class SocialTableViewController: UITableViewController {
     
-    var titleList = ["Fotografering","IOS Appar","Wordpress Sidor","Grafiskt Material" ]
+    var imageList = ["SocialIcon1", "SocialIcon4","SocialIcon5","SocialIcon6","SocialIcon7",]
+    
+    var titleList = ["Facebook", "LinkedIn","Youtube","WWW","Instagram",]
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.backgroundView = UIImageView(image: UIImage(named: "Background"))
-        
+        self.navigationItem.title = "Sociala Länkar"
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,19 +46,18 @@ class ServiceTableViewController: UITableViewController {
         return titleList.count
     }
 
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
-    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "serviceCell", for: indexPath) as! ServiceTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SocialTableViewCell
         
-      //  cell.textLabel?.text = titleList[indexPath.row]
+        
+        cell.cellImage.image = UIImage(named: imageList[indexPath.row])
         cell.cellTitle.text = titleList[indexPath.row]
+        // Configure the cell...
 
         return cell
     }
-
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -88,22 +94,22 @@ class ServiceTableViewController: UITableViewController {
     }
     */
 
-
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "segueDetails"{
-            let dvc = segue.destination as! ServiceViewController
-            
-            if let indexPath = self.tableView.indexPathForSelectedRow{
+        if segue.identifier == "showDetail"{
+            let dvc = segue.destination as! SocialViewController
+            if let indexPath = self.tableView.indexPathForSelectedRow {
                 dvc.sentData = titleList[indexPath.row] as String
             }
         }
         
         
+    
     }
-
+    
 
 }

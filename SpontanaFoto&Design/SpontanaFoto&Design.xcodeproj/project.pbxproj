@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54311576202F44A30092D813 /* EpostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54311575202F44A30092D813 /* EpostViewController.swift */; };
+		54311578202F4BCE0092D813 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54311577202F4BCE0092D813 /* MessageUI.framework */; };
+		5431157B202F5A590092D813 /* SocialTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431157A202F5A590092D813 /* SocialTableViewController.swift */; };
+		5431157D202F5A700092D813 /* SocialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431157C202F5A700092D813 /* SocialTableViewCell.swift */; };
+		5431157F202F78610092D813 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431157E202F78610092D813 /* SocialViewController.swift */; };
 		545F9518202C59B60026E0AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F9517202C59B60026E0AD /* AppDelegate.swift */; };
 		545F951A202C59B60026E0AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F9519202C59B60026E0AD /* ViewController.swift */; };
 		545F951D202C59B60026E0AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545F951B202C59B60026E0AD /* Main.storyboard */; };
@@ -23,6 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54311575202F44A30092D813 /* EpostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpostViewController.swift; sourceTree = "<group>"; };
+		54311577202F4BCE0092D813 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		5431157A202F5A590092D813 /* SocialTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialTableViewController.swift; sourceTree = "<group>"; };
+		5431157C202F5A700092D813 /* SocialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialTableViewCell.swift; sourceTree = "<group>"; };
+		5431157E202F78610092D813 /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		545F9514202C59B60026E0AD /* SpontanaFoto&Design.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpontanaFoto&Design.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		545F9517202C59B60026E0AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		545F9519202C59B60026E0AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54311578202F4BCE0092D813 /* MessageUI.framework in Frameworks */,
 				5475437C202E1ABE00C49AD0 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,6 +63,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54311579202F59DE0092D813 /* Social */ = {
+			isa = PBXGroup;
+			children = (
+				5431157A202F5A590092D813 /* SocialTableViewController.swift */,
+				5431157C202F5A700092D813 /* SocialTableViewCell.swift */,
+				5431157E202F78610092D813 /* SocialViewController.swift */,
+			);
+			path = Social;
+			sourceTree = "<group>";
+		};
 		545F950B202C59B50026E0AD = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +99,7 @@
 				545F9529202C83010026E0AD /* Service */,
 				545F9533202CAFC90026E0AD /* Portfolio */,
 				54754377202E15C400C49AD0 /* KontaktOss */,
+				54311579202F59DE0092D813 /* Social */,
 				545F951B202C59B60026E0AD /* Main.storyboard */,
 				545F951E202C59B60026E0AD /* Assets.xcassets */,
 				545F9520202C59B60026E0AD /* LaunchScreen.storyboard */,
@@ -117,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				54754378202E162600C49AD0 /* KontaktOssViewController.swift */,
+				54311575202F44A30092D813 /* EpostViewController.swift */,
 			);
 			path = KontaktOss;
 			sourceTree = "<group>";
@@ -124,6 +147,7 @@
 		5475437A202E1ABE00C49AD0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				54311577202F4BCE0092D813 /* MessageUI.framework */,
 				5475437B202E1ABE00C49AD0 /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -208,12 +232,16 @@
 			files = (
 				545F952B202C833E0026E0AD /* ServiceTableViewController.swift in Sources */,
 				545F952D202C83800026E0AD /* ServiceTableViewCell.swift in Sources */,
+				5431157F202F78610092D813 /* SocialViewController.swift in Sources */,
+				54311576202F44A30092D813 /* EpostViewController.swift in Sources */,
 				545F951A202C59B60026E0AD /* ViewController.swift in Sources */,
 				545F9537202CEE910026E0AD /* PortfolioCollectionViewCell.swift in Sources */,
 				545F9535202CEA3E0026E0AD /* PortfolioCollectionViewController.swift in Sources */,
 				545F952F202C83D60026E0AD /* ServiceViewController.swift in Sources */,
 				545F9532202CA89B0026E0AD /* OmOssViewController.swift in Sources */,
 				54754379202E162600C49AD0 /* KontaktOssViewController.swift in Sources */,
+				5431157B202F5A590092D813 /* SocialTableViewController.swift in Sources */,
+				5431157D202F5A700092D813 /* SocialTableViewCell.swift in Sources */,
 				545F9518202C59B60026E0AD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

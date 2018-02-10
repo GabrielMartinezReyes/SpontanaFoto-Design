@@ -350,8 +350,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fnZ-1P-xYC">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="373"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fnZ-1P-xYC">
+                                <rect key="frame" x="16" y="20" width="343" height="353"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bSw-lY-HAY">
                                 <rect key="frame" x="16" y="381" width="343" height="240"/>
@@ -405,10 +406,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fnZ-1P-xYC" firstAttribute="trailing" secondItem="YS4-nV-XUE" secondAttribute="trailing" id="Lya-0x-q9P"/>
-                            <constraint firstItem="fnZ-1P-xYC" firstAttribute="top" secondItem="YS4-nV-XUE" secondAttribute="top" id="M0B-xL-txg"/>
-                            <constraint firstItem="bSw-lY-HAY" firstAttribute="top" secondItem="fnZ-1P-xYC" secondAttribute="bottom" constant="8" id="Ogn-LW-Z1g"/>
-                            <constraint firstItem="fnZ-1P-xYC" firstAttribute="leading" secondItem="YS4-nV-XUE" secondAttribute="leading" id="Tfn-nG-asq"/>
                             <constraint firstItem="bSw-lY-HAY" firstAttribute="leading" secondItem="YS4-nV-XUE" secondAttribute="leading" constant="16" id="lho-3p-OVM"/>
                             <constraint firstItem="YS4-nV-XUE" firstAttribute="trailing" secondItem="bSw-lY-HAY" secondAttribute="trailing" constant="16" id="pOK-S8-1J8"/>
                             <constraint firstItem="YS4-nV-XUE" firstAttribute="bottom" secondItem="bSw-lY-HAY" secondAttribute="bottom" constant="20" id="zqC-lH-9mg"/>

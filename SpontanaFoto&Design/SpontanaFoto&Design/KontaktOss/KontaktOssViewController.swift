@@ -76,15 +76,15 @@ class KontaktOssViewController: UIViewController {
 
     @IBAction func directions(_ sender: Any) {
         
-        UIApplication.shared.open(URL(string:"http://maps.apple.com/maps?daddr=\(latitude), \(longitude)")!, options: [:], completionHandler: nil)
-        
-        
-        
+        UIApplication.shared.open(URL(string: "http://maps.apple.com/maps?daddr=\(latitude),\(longitude)")!, options: [:], completionHandler: nil)
+
         
         
     }
     
     @IBAction func callUs(_ sender: Any) {
+        
+        UIApplication.shared.open(URL(string: "tel://+46707414673")!, options: [:], completionHandler: nil)
     }
     
     

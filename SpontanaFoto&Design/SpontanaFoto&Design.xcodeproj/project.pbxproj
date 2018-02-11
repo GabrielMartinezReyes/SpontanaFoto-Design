@@ -23,6 +23,7 @@
 		545F9532202CA89B0026E0AD /* OmOssViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F9531202CA89B0026E0AD /* OmOssViewController.swift */; };
 		545F9535202CEA3E0026E0AD /* PortfolioCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F9534202CEA3E0026E0AD /* PortfolioCollectionViewController.swift */; };
 		545F9537202CEE910026E0AD /* PortfolioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F9536202CEE910026E0AD /* PortfolioCollectionViewCell.swift */; };
+		5463A4102030BECF008A2A42 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5463A40F2030BECF008A2A42 /* DetailViewController.swift */; };
 		54754379202E162600C49AD0 /* KontaktOssViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54754378202E162600C49AD0 /* KontaktOssViewController.swift */; };
 		5475437C202E1ABE00C49AD0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5475437B202E1ABE00C49AD0 /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		545F9531202CA89B0026E0AD /* OmOssViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmOssViewController.swift; sourceTree = "<group>"; };
 		545F9534202CEA3E0026E0AD /* PortfolioCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCollectionViewController.swift; sourceTree = "<group>"; };
 		545F9536202CEE910026E0AD /* PortfolioCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCollectionViewCell.swift; sourceTree = "<group>"; };
+		5463A40F2030BECF008A2A42 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		54754378202E162600C49AD0 /* KontaktOssViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KontaktOssViewController.swift; sourceTree = "<group>"; };
 		5475437B202E1ABE00C49AD0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -131,6 +133,7 @@
 			children = (
 				545F9534202CEA3E0026E0AD /* PortfolioCollectionViewController.swift */,
 				545F9536202CEE910026E0AD /* PortfolioCollectionViewCell.swift */,
+				5463A40F2030BECF008A2A42 /* DetailViewController.swift */,
 			);
 			path = Portfolio;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				5431157B202F5A590092D813 /* SocialTableViewController.swift in Sources */,
 				5431157D202F5A700092D813 /* SocialTableViewCell.swift in Sources */,
 				545F9518202C59B60026E0AD /* AppDelegate.swift in Sources */,
+				5463A4102030BECF008A2A42 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

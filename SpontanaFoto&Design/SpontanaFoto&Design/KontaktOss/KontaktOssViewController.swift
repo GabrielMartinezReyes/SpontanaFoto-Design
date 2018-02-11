@@ -22,14 +22,14 @@ class KontaktOssViewController: UIViewController {
     
     @IBOutlet weak var linkBtn: UIButton!
     
-    var latitude = 56.044123
-    var longitude = 12.695043
+    var latitude = 56.060221
+    var longitude = 12.695843
     
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
         
         adressBtn.layer.cornerRadius = 5
         ringOssBtn.layer.cornerRadius = 5
@@ -53,28 +53,7 @@ class KontaktOssViewController: UIViewController {
         self.mapView.addAnnotation(pinAnn)
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+   
     }
 
     override func didReceiveMemoryWarning() {
@@ -82,16 +61,6 @@ class KontaktOssViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     @IBAction func directions(_ sender: Any) {
         

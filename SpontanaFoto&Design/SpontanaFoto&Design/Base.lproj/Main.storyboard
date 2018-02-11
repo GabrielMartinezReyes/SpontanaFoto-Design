@@ -257,7 +257,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rS0-iR-btv">
                                 <rect key="frame" x="16" y="288" width="343" height="260"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">Mitt namn är Gabriel Martinez, jag är skapare av företaget “Spontana foto &amp; design”. I mitten av 2014 bestämde mig för att göra mitt examensarbete genom att starta en enskild firma inom fotografering och webbutveckling som skulle kallas för Spontana foto &amp; design. Fotografering har alltid varit en hobby men då jag samma år blev jag pappa till världens bästa son växte intresset för fotografering och jag tog fotografering till en mer professionell nivå. Jag skaffade min första DSLR kamera för att dokumentära min sons uppväxt men insåg att jag var duktig och kunde göra folk glada med mina bilder. Nu har företaget funnits ett tag och jag har hunnit med både bröllops- och porträttfotografering. Välkommen att ta del av vårt utbud!</mutableString>
+                                <string key="text">Mitt namn är Gabriel Martinez, jag är skapare av företaget “Spontana foto &amp; design”. I mitten av 2014 bestämde mig för att göra mitt examensarbete genom att starta en enskild firma inom fotografering och webbutveckling som skulle kallas för Spontana foto &amp; design. Fotografering har alltid varit en hobby men då jag samma år blev jag pappa till världens bästa son växte intresset för fotografering och jag tog fotografering till en mer professionell nivå. Jag skaffade min första DSLR kamera för att dokumentära min sons uppväxt men insåg att jag var duktig och kunde göra folk glada med mina bilder. Nu har företaget funnits ett tag och jag har hunnit med både bröllops- och porträttfotografering. Välkommen att ta del av vårt utbud!</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -430,6 +430,42 @@
             </objects>
             <point key="canvasLocation" x="2200.8000000000002" y="1061.8226600985222"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="y7G-pc-DC5">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="yzL-uE-4wE" customClass="DetailViewController" customModule="SpontanaFoto_Design" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GvJ-Fm-q4N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="34k-0E-fJx">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xq8-ha-JKQ">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Xq8-ha-JKQ" firstAttribute="bottom" secondItem="FvC-Hy-JDT" secondAttribute="bottom" id="17o-kn-M7S"/>
+                            <constraint firstItem="FvC-Hy-JDT" firstAttribute="trailing" secondItem="Xq8-ha-JKQ" secondAttribute="trailing" id="3NV-Ra-XbC"/>
+                            <constraint firstItem="34k-0E-fJx" firstAttribute="bottom" secondItem="FvC-Hy-JDT" secondAttribute="bottom" id="ITT-D2-TI7"/>
+                            <constraint firstItem="Xq8-ha-JKQ" firstAttribute="leading" secondItem="FvC-Hy-JDT" secondAttribute="leading" id="JlV-jA-lO6"/>
+                            <constraint firstItem="34k-0E-fJx" firstAttribute="trailing" secondItem="FvC-Hy-JDT" secondAttribute="trailing" id="cPX-m2-0UM"/>
+                            <constraint firstItem="Xq8-ha-JKQ" firstAttribute="top" secondItem="FvC-Hy-JDT" secondAttribute="top" id="fnU-Bp-NkT"/>
+                            <constraint firstItem="34k-0E-fJx" firstAttribute="top" secondItem="FvC-Hy-JDT" secondAttribute="top" id="wDo-D4-aUg"/>
+                            <constraint firstItem="34k-0E-fJx" firstAttribute="leading" secondItem="FvC-Hy-JDT" secondAttribute="leading" id="xO7-uX-bMN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FvC-Hy-JDT"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgImage" destination="Xq8-ha-JKQ" id="oIf-mz-uOE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sBz-Uq-ifN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1276" y="-1060.344827586207"/>
+        </scene>
         <!--Portfolio-->
         <scene sceneID="mhu-FR-6yj">
             <objects>
@@ -479,7 +515,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8U4-0a-cLZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1327.2" y="-392.36453201970443"/>
+            <point key="canvasLocation" x="-2063" y="-1060"/>
         </scene>
         <!--Kontakt Oss-->
         <scene sceneID="XDd-jL-Fku">
@@ -500,7 +536,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bSw-lY-HAY">
                                 <rect key="frame" x="16" y="381" width="343" height="240"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Norra Stenbocksgatan 54, Helsingborg, Sverige" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FgR-Vn-Zhc">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Norra Stenbocksgatan 44, Helsingborg, Sverige" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FgR-Vn-Zhc">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -708,7 +744,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NKW-N5-9f8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3079" y="296"/>
+            <point key="canvasLocation" x="-4001" y="-129"/>
         </scene>
         <!--Hem-->
         <scene sceneID="iER-Yz-SCl">
@@ -804,7 +840,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tYM-xZ-xWz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2214" y="-392"/>
+            <point key="canvasLocation" x="-2857" y="-1059"/>
         </scene>
         <!--Kontakt Oss-->
         <scene sceneID="AXF-F7-GIg">

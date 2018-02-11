@@ -20,20 +20,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var kontaktaOssbtn4: UIButton!
     
     @IBOutlet weak var socialalankarbtn5: UIButton!
-    
-    
-    
-    
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         cornerRadius()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        
-        
+     
     }
 
     
